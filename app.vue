@@ -1,12 +1,8 @@
 <template>
   <div class="section pt-5">
     <pep-navbar />
-    
+
     <NuxtPage/>
-    <div>
-      
-    </div>
-    <pep-footer />
   </div>
 </template>
 

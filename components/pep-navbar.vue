@@ -1,6 +1,6 @@
 <template>
   <div>
-    <navbar class="navbar">
+    <nav class="navbar">
       <div class="navbar-brand">
         <div class="navbar-item">
          <figure class="image">
@@ -22,7 +22,7 @@
           Contact
         </div>
       </div>
-    </navbar>
+    </nav>
   </div>
 </template>
 

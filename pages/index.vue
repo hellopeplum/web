@@ -16,7 +16,7 @@
                     every story we tell.
                 </p>
                 <br>
-                <div class="buttons">
+                <div class="buttons mt-5">
 
                     <n-link class="mr-6">
                         <p class="heading">WHAT WE DO</p>
