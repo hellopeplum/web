@@ -8,7 +8,7 @@
           </figure>
           <div class="columns is-centered mt-3">
             <div class="column is-4-desktop is-12-touch">
-              <p class="title is-size-3-desktop is-size-4-tablet">{{ row.title }}</p>
+              <p class="title is-size-3-desktop is-size-4-touch">{{ row.title }}</p>
               <p class="subtitle ">{{ row.year_of_work }}</p>
             </div>
             <div class="column is-6-desktop is-12-touch is-offset-2-desktop">
@@ -24,7 +24,7 @@
       <br>
       <br>
     </section>
-    <p class="title mb-6 pb-6">All Projects →</p>
+    <nuxt-link to="work" class="title mb-6 pb-6">All Projects →</nuxt-link>
     <br>
     <br>
  </div>

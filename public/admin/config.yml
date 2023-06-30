@@ -7,9 +7,9 @@ public_folder: /img
 site_url: https://peplum.netlify.app/
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
+  - name: 'work'
+    label: 'Work'
+    folder: 'content/work'
     format: 'frontmatter'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -19,4 +19,5 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Cover', name: 'cover', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }

@@ -1,10 +1,10 @@
 <template>
   <div>
 
-    <div class="level mb-0 pb-0 is-mobile is-hidden-tablet">
+    <div class="level px-0 mb-0 pb-0 is-mobile is-hidden-tablet">
       <nuxt-link to="/" class="level-left">
-        <figure class="image" style="width:120px">
-          <svg width="120" viewBox="0 0 688 186" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <figure class="image" style="width:100px">
+          <svg width="100" viewBox="0 0 688 186" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M0 186V41.3333H21.6941L23.1403 60.3467V186H0ZM55.7848 147.147C47.1071 147.147 39.6003 144.942 33.2643 140.533C27.0659 135.987 22.3139 129.649 19.0081 121.52C15.7024 113.391 14.0495 103.884 14.0495 93C14.0495 81.9778 15.7024 72.4711 19.0081 64.48C22.3139 56.3511 27.0659 50.0822 33.2643 45.6733C39.6003 41.1267 47.1071 38.8533 55.7848 38.8533C65.1511 38.8533 73.2778 41.1267 80.1648 45.6733C87.1895 50.0822 92.6303 56.3511 96.487 64.48C100.481 72.4711 102.479 81.9778 102.479 93C102.479 103.884 100.481 113.391 96.487 121.52C92.6303 129.649 87.1895 135.987 80.1648 140.533C73.2778 144.942 65.1511 147.147 55.7848 147.147ZM49.9997 126.067C55.5093 126.067 60.3991 124.689 64.669 121.933C68.9389 119.04 72.3136 115.113 74.7929 110.153C77.41 105.193 78.7185 99.4756 78.7185 93C78.7185 86.5244 77.4788 80.8067 74.9995 75.8467C72.6579 70.8867 69.3522 67.0289 65.0822 64.2733C60.8123 61.5178 55.8536 60.14 50.2063 60.14C44.9722 60.14 40.289 61.5178 36.1568 64.2733C32.0246 67.0289 28.7877 70.8867 26.4461 75.8467C24.2423 80.8067 23.1403 86.5244 23.1403 93C23.1403 99.4756 24.2423 105.193 26.4461 110.153C28.7877 115.113 31.9557 119.04 35.9502 121.933C40.0824 124.689 44.7656 126.067 49.9997 126.067Z"
               fill="#9640EC" class="svg-elem-1"></path>
@@ -33,17 +33,31 @@
     </div>
     <div class="mobile-nav" v-show="showMobileNav">
       <ul>
-        <nuxt-link to="/" class="has-text-dark has-text-weight-semibold">Home</nuxt-link>
-        <nuxt-link to="/" class="has-text-dark has-text-weight-semibold">Work</nuxt-link>
-        <nuxt-link  to="/about" class="has-text-dark has-text-weight-semibold">About us </nuxt-link>
-        <nuxt-link to="/" class="has-text-dark has-text-weight-semibold" >Contact </nuxt-link>
+        <nuxt-link to="/" class="has-text-dark has-text-weight-semibold">
+          <div class="is-active-radio" v-if="route.path == '/'"></div>
+          Home
+        </nuxt-link>
+        <nuxt-link to="/" class="has-text-dark has-text-weight-semibold">
+
+          <div class="is-active-radio" v-if="route.path.includes('work')"></div>
+          Work
+        </nuxt-link>
+        <nuxt-link to="/about" class="has-text-dark has-text-weight-semibold">
+
+          <div class="is-active-radio" v-if="route.path.includes('about')"></div>
+          About us
+        </nuxt-link>
+        <nuxt-link to="/" class="has-text-dark has-text-weight-semibold">
+          <div class="is-active-radio" v-if="route.path.includes('contact')"></div>
+          Contact
+        </nuxt-link>
       </ul>
     </div>
     <nav class="navbar">
       <div class="navbar-menu">
 
-        <div class="navbar-brand">
-          <nuxt-link to="/" class="navbar-item">
+        <div class="navbar-brand px-0 py-0" >
+          <nuxt-link to="/" class="navbar-item  px-0 pl-1 py-0">
             <figure class="image" style="width:150px">
               <svg width="120" viewBox="0 0 688 186" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -89,7 +103,7 @@
 <script setup>
 const showMobileNav = ref(false)
 
-function showNav(){
+function showNav() {
   showMobileNav.value = !showMobileNav.value
 }
 
@@ -97,7 +111,7 @@ const route = useRoute();
 
 watch(route, value => {
   showMobileNav.value = false
-}, {deep: true, immediate: true})
+}, { deep: true, immediate: true })
 </script>
 
 <style>
@@ -105,18 +119,29 @@ watch(route, value => {
   background-color:yellow;
 } */
 
-.mobile-nav{
-  padding-top:2rem;
-  width:100%;
-  display:block;
+.mobile-nav {
+  padding-top: 2rem;
+  width: 100%;
+  display: block;
 }
-.mobile-nav a{
-  width:100%;
-  padding-top:1rem;
-  padding-bottom:1rem;
-  display:block;
+
+.mobile-nav a {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: block;
   border-bottom: 1px solid #0a0a0a;
 }
+
+.is-active-radio {
+  width: 10px;
+  margin-right: 0.5rem;
+  height: 10px;
+  background-color: #FFF000;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 /* Animate SVG pelpum Brand */
 
 /***************************************************
@@ -273,5 +298,4 @@ watch(route, value => {
 .svg-elem-6 {
   -webkit-animation: animate-svg-fill-6 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 1.3s both;
   animation: animate-svg-fill-6 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 1.3s both
-}
-</style>
+}</style>

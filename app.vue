@@ -19,7 +19,8 @@
 }
 
 html {
-  background-color: #ffd202
+  background-color: #ffd202;
+  scroll-behavior: smooth;
 }
 
 body {

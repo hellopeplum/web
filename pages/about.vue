@@ -4,7 +4,7 @@
             <div class="columns">
                 <div iv class="column is-4-desktop">
                     <p class="title my-6">
-                        Set up in 2023 by a <nuxt-link class="is-underlined">badass designer</nuxt-link> & a <nuxt-link
+                        Set up in 2023 by a <nuxt-link to="#dhruv" class="is-underlined">badass designer</nuxt-link> & a <nuxt-link to="#padam"
                             class="is-underlined">full-stack programmer on steroids</nuxt-link> . This duo brings in
                         diverse skills sets ranging from 0 to N ( almost everything )
                     </p>
@@ -42,8 +42,8 @@
             <p class="heading">OUR TEAM</p>
             <br>
             <div class="columns">
-                <div iv class="column is-4-desktop">
-                    <figure class="image has-background-warning is-rounded  is-128x128">
+                <div id="dhruv" class="column is-4-desktop">
+                    <figure class="image has-background-secondary is-rounded  is-128x128">
                         <img src="" class="is-rounded" alt="">
                     </figure>
                     <br>
@@ -65,8 +65,8 @@
                     <a href="" class="has-text-dark is-underlined">Email </a>
 
                 </div>
-                <div iv class="column is-4-desktop">
-                    <figure class="image has-background-warning is-rounded  is-128x128">
+                <div  id="padam" class="column is-4-desktop">
+                    <figure class="image has-background-secondary is-rounded  is-128x128">
                         <img src="" class="is-rounded" alt="">
                     </figure>
                     <br>
@@ -103,5 +103,9 @@
 <style>
 figure.is-rounded {
     border-radius: 50% !important;
+}
+
+.has-background-secondary{
+    background-color: #FFF000;
 }
 </style>
