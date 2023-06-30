@@ -3,7 +3,7 @@
 
         <div class="section columns px-2 mt-6">
             <div class="column is-5-desktop is-4-widescreen is-8-tablet is-12-mobile">
-                <p class="title is-3-touch">
+                <p class="title is-size-3-desktop is-4-touch">
                     Hello, we are Peplum
                     <br>
                     <br>
