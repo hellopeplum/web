@@ -4,7 +4,7 @@
       <div class="navbar-brand">
         <div class="navbar-item">
          <figure class="image">
-          <img src="peplum-primary.svg" alt="">
+          <img src="/peplum-primary.svg" alt="">
          </figure>
         </div>
       </div>

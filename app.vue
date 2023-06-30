@@ -3,6 +3,7 @@
     <pep-navbar />
 
     <NuxtPage/>
+    <pep-footer/>
   </div>
 </template>
 
