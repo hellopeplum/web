@@ -12,7 +12,7 @@
               <p class="subtitle ">{{ row.year_of_work }}</p>
             </div>
             <div class="column is-6-desktop is-12-touch is-offset-2-desktop">
-              <p class="is-size-5">{{ row.description }}</p>
+              <p class="is-size-5-desktop is-size-6-touch">{{ row.description }}</p>
               <br>
               <nuxt-link v-if="row.link_preview" class="is-underlined is-size-5">See live →</nuxt-link>
               <nuxt-link v-if="row.link_to_read" class="is-underlined is-size-5">Read more about project →</nuxt-link>
