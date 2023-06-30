@@ -7,11 +7,11 @@
             <img class="" src="" alt="">
           </figure>
           <div class="columns is-centered mt-3">
-            <div class="column is-4">
-              <p class="title is-size-3">{{ row.title }}</p>
+            <div class="column is-4 is-12-touch">
+              <p class="title is-size-3 is-size-4-tablet">{{ row.title }}</p>
               <p class="subtitle ">{{ row.year_of_work }}</p>
             </div>
-            <div class="column is-6 is-offset-2-desktop">
+            <div class="column is-6 is-12-touch is-offset-2-desktop">
               <p class="is-size-5">{{ row.description }}</p>
               <br>
               <nuxt-link v-if="row.link_preview" class="is-underlined is-size-5">See live →</nuxt-link>

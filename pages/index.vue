@@ -3,7 +3,7 @@
 
         <div class="section columns px-2 mt-6">
             <div class="column is-5-desktop is-4-widescreen is-8-tablet is-12-mobile">
-                <p class="title">
+                <p class="title is-3-touch">
                     Hello, we are Peplum
                     <br>
                     <br>
@@ -21,7 +21,7 @@
                         <div class="level-item">
                             <nuxt-link to="#recent-works" class="has-text-dark is-clickable">
                                 <p class="heading">WHAT WE DO</p>
-                                <p class="is-size-5 is-underlined">↓ Recent works</p>
+                                <p class="is-size-5-tablet is-6-touch is-underlined">↓ Recent works</p>
                             </nuxt-link>
 
                         </div>
@@ -29,7 +29,7 @@
 
                             <nuxt-link class="has-text-dark">
                                 <p class="heading">PROJECT ENQUIRIES</p>
-                                <p class="is-size-5 is-underlined">hellopeplum@gmail.com ↗</p>
+                                <p class="is-size-5-tablet is-6-touch is-underlined">hellopeplum@gmail.com ↗</p>
                             </nuxt-link>
                         </div>
                     </div>
