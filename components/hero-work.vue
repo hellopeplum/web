@@ -1,12 +1,71 @@
 <template>
-  <div>
-    
-  </div>
+  <div id="recent-works"> 
+    <section class=" py-6 my-6" :key="index" v-for="(row,index) in data">
+      <div class="columns" :class="{'is-centered':row.shift == 'center'}" >
+        <div class="column is-8" :class="{'is-offset-4-desktop':row.shift == 'right'}">
+          <figure class="image has-background-white-bis is-16by9">
+            <img class="" src="" alt="">
+          </figure>
+          <div class="columns is-centered mt-3">
+            <div class="column is-4">
+              <p class="title is-size-3">{{ row.title }}</p>
+              <p class="subtitle ">{{ row.year_of_work }}</p>
+            </div>
+            <div class="column is-6 is-offset-2-desktop">
+              <p class="is-size-5">{{ row.description }}</p>
+              <br>
+              <nuxt-link v-if="row.link_preview" class="is-underlined is-size-5">See live →</nuxt-link>
+              <nuxt-link v-if="row.link_to_read" class="is-underlined is-size-5">Read more about project →</nuxt-link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+    </section>
+    <p class="title mb-6 pb-6">All Projects →</p>
+    <br>
+    <br>
+ </div>
 </template>
 
 <script setup>
+const data = [
+  {
+    'title': 'Atelier DS, handcrafted homewares',
+    'description': "Through a sensitive mixed media approach, this musical number aims to help first\
+                responders by\
+                highlighting and visualizing the common feelings they have to deal with when doing their job. You won’t\
+                know whether to laugh or cry",
+    'link_to_read': null,
+    'link_preview': null,
+    'year_of_work': '2016 - 2018',
+    'shift': 'center', // left , right, center
+  },
+  {
+    'title': 'Atelier DS, handcrafted homewares',
+    'description': "Through a sensitive mixed media approach, this musical number aims to help first\
+                responders by\
+                highlighting and visualizing the common feelings they have to deal with when doing their job. You won’t\
+                know whether to laugh or cry",
+    'link_to_read': null,
+    'link_preview': null,
+    'year_of_work': '2016 - 2018',
+    'shift': 'left', // left , right, center
+  },
+  {
+    'title': 'Atelier DS, handcrafted homewares',
+    'description': "Through a sensitive mixed media approach, this musical number aims to help first\
+                responders by\
+                highlighting and visualizing the common feelings they have to deal with when doing their job. You won’t\
+                know whether to laugh or cry",
+    'link_to_read': null,
+    'link_preview': null,
+    'year_of_work': '2016 - 2018',
+    'shift': 'right', // left , right, center
+  },
+]
 </script>
 
-<style>
-
-</style>
+<style></style>

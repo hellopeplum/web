@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer px-0 has-background-white">
-    <div class="level ">
+  <footer class="footer pt-6 mt-6 pb-0 px-0 has-background-white">
+    <div class="level  is-hidden-mobile">
       <div class="level-left">
 
         <div class="level-item  has-text-left is-pulled-left">
@@ -24,6 +24,20 @@
           </p>
         </div>
       </div>
+    </div>
+    <div class="is-hidden-tablet">
+      <p>©️ 2023 Peplum</p>
+      <br>
+      <p>Jaipur, India</p>
+      <br>
+      <p>hellopeplum@gmail.com</p>
+      <br>
+      <p>Follow us </p>
+      <p>
+            <a href="" class="mr-2 is-underlined">Instagram,</a>
+            <a href="" class="mr-2 is-underlined">Behance,</a>
+            <a href="" class="is-underlined">Dribbble</a>
+          </p>
     </div>
   </footer>
 </template>
