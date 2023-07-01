@@ -12,7 +12,7 @@ collections:
     folder: 'content/work'
     format: 'frontmatter'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     editor:
       preview: false
     fields:
@@ -21,3 +21,5 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Cover', name: 'cover', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Alight Shift (left,right,center)', name: 'shift', widget: 'string' }
+      - { label: 'Time (2018 - 2019)', name: 'shift', widget: 'string' }

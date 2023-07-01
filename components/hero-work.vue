@@ -1,6 +1,6 @@
 <template>
   <div id="recent-works">
-    <section class=" py-6 my-6" :key="index" v-for="(row, index) in data">
+    <section class=" py-6 my-6" :key="index" v-for="(row, index) in posts">
       <div class="columns" :class="{ 'is-centered': row.shift == 'center' }">
         <div class="column is-8" :class="{ 'is-offset-4-desktop': row.shift == 'right' }">
           <figure class="image has-background-white-bis is-16by9">
@@ -68,7 +68,9 @@ const data = [
   },
 ];
 
-const { posts:blogposts } = await useAsyncData('work', () => {queryContent('work').findOne()})
+const { data: posts } = await useAsyncData('work', () => queryContent('/work').only(['title','cover','description','time','shift']).find())
+
+// const { posts:blogposts } = await useAsyncData('work', () => {queryContent('work').findOne()})
 
 
 </script>

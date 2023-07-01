@@ -23,6 +23,7 @@
                         </figure>
                         <br>
                         <h2 class="subtitle">{{ doc.description }}</h2>
+                        br
                         <!-- <ContentRenderer :value="doc" /> -->
                     </ContentDoc>
                 </article>
