@@ -22,4 +22,4 @@ collections:
       - { label: 'Cover', name: 'cover', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Alight Shift (left,right,center)', name: 'shift', widget: 'string' }
-      - { label: 'Time (2018 - 2019)', name: 'shift', widget: 'string' }
+      - { label: 'Time (2018 - 2019)', name: 'time', widget: 'string' }
