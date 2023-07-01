@@ -1,8 +1,8 @@
 <template>
-  <div id="recent-works"> 
-    <section class=" py-6 my-6" :key="index" v-for="(row,index) in data">
-      <div class="columns" :class="{'is-centered':row.shift == 'center'}" >
-        <div class="column is-8" :class="{'is-offset-4-desktop':row.shift == 'right'}">
+  <div id="recent-works">
+    <section class=" py-6 my-6" :key="index" v-for="(row, index) in data">
+      <div class="columns" :class="{ 'is-centered': row.shift == 'center' }">
+        <div class="column is-8" :class="{ 'is-offset-4-desktop': row.shift == 'right' }">
           <figure class="image has-background-white-bis is-16by9">
             <img class="" src="" alt="">
           </figure>
@@ -24,10 +24,11 @@
       <br>
       <br>
     </section>
+    {{ posts }}
     <nuxt-link to="work" class="title mb-6 pb-6">All Projects →</nuxt-link>
     <br>
     <br>
- </div>
+  </div>
 </template>
 
 <script setup>
@@ -65,7 +66,11 @@ const data = [
     'year_of_work': '2016 - 2018',
     'shift': 'right', // left , right, center
   },
-]
+];
+
+const { posts:blogposts } = await useAsyncData('work', () => {queryContent('work').findOne()})
+
+
 </script>
 
 <style></style>
