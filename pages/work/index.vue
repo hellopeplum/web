@@ -4,7 +4,8 @@
         <div class="columns" :class="{ 'is-centered': row.shift == 'center' }">
           <div class="column is-8" :class="{ 'is-offset-4-desktop': row.shift == 'right' }">
             <figure class="image has-background-white-bis is-16by9">
-              <img class="" src="" alt="">
+                <nuxt-img :src="row.cover" />
+              <!-- <img class="" src="" alt=""> -->
             </figure>
             <div class="columns is-centered mt-3">
               <div class="column is-4-desktop is-12-touch">
@@ -24,7 +25,6 @@
         <br>
         <br>
       </section>
-      {{ posts }}
       <br>
       <br>
     </div>
