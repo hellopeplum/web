@@ -6,6 +6,9 @@ export default defineNuxtConfig({
     '@nuxt/image',
   ],
   image: {
+    netlify: {
+      baseURL: 'https://peplum.in'
+    },
     quality: 80,
     format: ['webp'],
     screens: {
