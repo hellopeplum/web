@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <div class="level px-0 mb-0 pb-0 is-mobile is-hidden-tablet">
+    <div class="level px-0 mb-0 pb-0 is-mobile is-hidden-desktop">
       <nuxt-link to="/" class="level-left">
         <figure class="image" style="width:100px">
           <img src="/peplum-alt.svg" alt="">
@@ -29,7 +29,8 @@
       </nuxt-link>
       <div class="level-right">
 
-        <p @click="showNav" class="has-text-weight-semibold has-text-dark">Menu</p>
+        <p @click="showNav" v-if="!showMobileNav" class="has-text-weight-semibold has-text-dark">Menu</p>
+        <p @click="showNav" v-if="showMobileNav" class="has-text-weight-semibold has-text-dark">Close</p>
       </div>
     </div>
     <div class="mobile-nav" v-show="showMobileNav">

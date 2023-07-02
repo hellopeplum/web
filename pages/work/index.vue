@@ -1,36 +1,35 @@
 <template>
     <div id="recent-works">
-      <section class=" py-6 my-6" :key="index" v-for="(row, index) in posts">
-        <div class="columns" :class="{ 'is-centered': row.shift == 'center' }">
-          <div class="column is-8" :class="{ 'is-offset-4-desktop': row.shift == 'right' }">
-            <figure class="image has-background-white-bis is-16by9">
-                <nuxt-img provider="netlify"  loading="lazy" :src="row.cover" />
-              <!-- <img class="" src="" alt=""> -->
-            </figure>
-            <div class="columns is-centered mt-3">
-              <div class="column is-4-desktop is-12-touch">
-                <p class="title is-size-3-desktop is-size-4-touch">{{ row.title }}</p>
-                <p class="subtitle ">{{ row.time }}</p>
-              </div>
-              <div class="column is-6-desktop is-12-touch is-offset-2-desktop">
-                <p class="is-size-5-desktop is-size-6-touch">{{ row.description }}</p>
-                <br>
-                <nuxt-link v-if="row.link_preview" class="is-underlined is-size-5">See live →</nuxt-link>
-                <nuxt-link v-if="row.link_to_read" class="is-underlined is-size-5">Read more about project →</nuxt-link>
-              </div>
+        <section class=" py-6 my-6" :key="index" v-for="(row, index) in posts">
+            <div class="columns" :class="{ 'is-centered': row.shift == 'center' }">
+                <div class="column is-8" :class="{ 'is-offset-4-desktop': row.shift == 'right' }">
+                    <figure class="image has-background-white-bis is-16by9">
+                        <nuxt-img provider="netlify" loading="lazy" :src="row.cover" />
+                        <!-- <img class="" src="" alt=""> -->
+                    </figure>
+                    <div class="columns is-centered mt-3">
+                        <div class="column is-4-desktop is-12-touch">
+                            <p class="title is-size-3-desktop is-size-4-touch">{{ row.title }}</p>
+                            <p class="subtitle ">{{ row.time }}</p>
+                        </div>
+                        <div class="column is-6-desktop is-12-touch is-offset-2-desktop">
+                            <p class="is-size-5-desktop is-size-6-touch">{{ row.description }}</p>
+                            <br>
+                            <nuxt-link :to="row._path" class="is-underlined is-size-5">Learn more →</nuxt-link>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
+            <br>
+            <br>
+            <br>
+        </section>
         <br>
         <br>
-        <br>
-      </section>
-      <br>
-      <br>
     </div>
-  </template>
+</template>
   
-  <script setup>
+<script setup>
 //   const data = [
 //     {
 //       'title': 'Atelier DS, handcrafted homewares',
@@ -66,12 +65,12 @@
 //       'shift': 'right', // left , right, center
 //     },
 //   ];
-  
-  const { data: posts } = await useAsyncData('work', () => queryContent('/work').only(['title','cover','description','time','shift']).find())
-  
+
+const { data: posts } = await useAsyncData('work', () => queryContent('/work').only(['title', 'cover', 'description', 'time', 'shift','_path']).find())
+
   // const { posts:blogposts } = await useAsyncData('work', () => {queryContent('work').findOne()})
+
+
+</script>
   
-  
-  </script>
-  
-  <style></style>
+<style></style>
