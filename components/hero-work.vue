@@ -9,13 +9,13 @@
           <div class="columns is-centered mt-3">
             <div class="column is-4-desktop is-12-touch">
               <p class="title is-size-3-desktop is-size-4-touch">{{ row.title }}</p>
-              <p class="subtitle ">{{ row.year_of_work }}</p>
+              <p class="subtitle mb-1">{{ row.time }}</p>
+              <p class="heading">Web Design & development, Identiity{{ row.tags }}</p>
             </div>
             <div class="column is-6-desktop is-12-touch is-offset-2-desktop">
               <p class="is-size-5-desktop is-size-6-touch">{{ row.description }}</p>
               <br>
-              <nuxt-link v-if="row.link_preview" class="is-underlined is-size-5">See live →</nuxt-link>
-              <nuxt-link v-if="row.link_to_read" class="is-underlined is-size-5">Read more about project →</nuxt-link>
+              <nuxt-link :to="row._path" class="is-underlined is-size-5">Learn more →</nuxt-link>
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@ const data = [
   },
 ];
 
-const { data: posts } = await useAsyncData('work', () => queryContent('/work').only(['title','cover','description','time','shift']).find())
+const { data: posts } = await useAsyncData('work', () => queryContent('/work').only(['title','cover','description','time','shift','_path']).find())
 
 // const { posts:blogposts } = await useAsyncData('work', () => {queryContent('work').findOne()})
 

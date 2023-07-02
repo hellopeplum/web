@@ -22,9 +22,9 @@
                             <img :src="doc.cover" alt="">
                         </figure>
                         <br>
-                        <h2 class="subtitle">{{ doc.description }}</h2>
+                        <h2 class="subtitle is-size-4-desktop is-size-5-touch">{{ doc.description }}</h2>
                         <br>
-                        <!-- <ContentRenderer :value="doc" /> -->
+                        <ContentRenderer class="is-size-5-desktop is-size-6-touch" :value="doc" />
                     </ContentDoc>
                 </article>
 
