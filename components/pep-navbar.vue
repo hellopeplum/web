@@ -48,7 +48,7 @@
           <div class="is-active-radio" v-if="route.path.includes('about')"></div>
           About us
         </nuxt-link>
-        <nuxt-link to="/" class="has-text-dark has-text-weight-semibold">
+        <nuxt-link to="/contact" class="has-text-dark has-text-weight-semibold">
           <div class="is-active-radio" v-if="route.path.includes('contact')"></div>
           Contact
         </nuxt-link>
@@ -99,7 +99,7 @@
 
             Work
           </nuxt-link>
-          <nuxt-link to="/" class="level-item pr-3" >
+          <nuxt-link to="/contact" class="level-item pr-3" >
             <div class="is-active-radio mr-2" v-if="route.path.includes('contact')"></div>
 
             Contact

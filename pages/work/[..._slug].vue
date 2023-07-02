@@ -27,8 +27,11 @@
                         <ContentRenderer class="is-size-5-desktop is-size-6-touch" :value="doc" />
                     </ContentDoc>
                 </article>
-
+                <br>
+                <br>
+                <nuxt-link to="/work" class="title my-6 ">← Back to Projects </nuxt-link>
             </div>
+
         </div>
     </main>
 </template>
