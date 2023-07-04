@@ -3,7 +3,7 @@
         <section class=" py-6 my-6" :key="index" v-for="(row, index) in posts">
             <div class="columns" :class="{ 'is-centered': row.shift == 'center' }">
                 <div class="column is-8" :class="{ 'is-offset-4-desktop': row.shift == 'right' }">
-                    <figure class="image has-background-white-bis is-16by9">
+                    <figure class="image has-background-white-bis">
                         <nuxt-img provider="netlify" loading="lazy" :src="row.cover" />
                         <!-- <img class="" src="" alt=""> -->
                     </figure>
