@@ -10,6 +10,7 @@ cover: /img/198c34_01f6474858b94283801fb2b2173b7d16~mv2.webp
 shift: center
 time: 2016-2019
 link_preview: .
+header_type: split
 link_to_read: .
 ---
 .
