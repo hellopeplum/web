@@ -18,7 +18,7 @@
                 <article class="prose">
                     <ContentDoc v-slot="{ doc }">
                         <h1 class="title is-size-2-desktop">{{ doc.title }}</h1>
-                        <figure class="figure image is-16by9">
+                        <figure class="figure image">
                             <img :src="doc.cover" alt="">
                         </figure>
                         <br>
