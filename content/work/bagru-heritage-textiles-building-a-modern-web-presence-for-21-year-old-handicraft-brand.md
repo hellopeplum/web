@@ -6,6 +6,7 @@ cover: /img/screely-1685212439531.png
 shift: left
 time: "2023"
 link_preview: https://bagru.in
+header_type: para
 link_to_read: " _"
 ---
 .﻿.
