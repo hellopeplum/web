@@ -16,10 +16,9 @@
               <nuxt-link :to="row._path" class="has-text-dark has-text-weight-semibold is-underlined is-size-5">Learn more →</nuxt-link>
             </div>
           </div>
-          <div class="columns is-centered mt-3" v-if="row.header_type == 'para'">
+          <div class="columns  mt-3" v-if="row.header_type == 'para'">
             <div class="column is-6-desktop is-12-touch">
               <p class="title is-size-3-desktop is-size-4-touch">{{ row.title }}</p>
-              <br>
               <p class="is-size-5-desktop is-size-6-touch">{{ row.description }}</p>
               <br>
               <nuxt-link :to="row._path" class="has-text-dark has-text-weight-semibold is-underlined is-size-5">Learn more →</nuxt-link>
@@ -76,7 +75,7 @@ const data = [
   },
 ];
 
-const { data: posts } = await useAsyncData('work', () => queryContent('/work').only(['title','cover','description','time','shift','_path']).find())
+const { data: posts } = await useAsyncData('work', () => queryContent('/work').only(['title','cover','description','time','shift','_path','header_type']).find())
 
 // const { posts:blogposts } = await useAsyncData('work', () => {queryContent('work').findOne()})
 
