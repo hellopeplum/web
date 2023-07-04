@@ -14,7 +14,7 @@
                     </p>
                 </div>
                 </div> -->
-            <div class="column is-8 is-offset-4-desktop">
+            <div class="column is-9 is-offset-3-desktop">
                 <article class="prose">
                     <ContentDoc v-slot="{ doc }">
                         <h1 class="title is-size-2-desktop">{{ doc.title }}</h1>
@@ -22,7 +22,12 @@
                             <img :src="doc.cover" alt="">
                         </figure>
                         <br>
-                        <h2 class="subtitle is-size-4-desktop is-size-5-touch">{{ doc.description }}</h2>
+                        <div class="columns">
+                            <div class="column is-7">
+
+                                <h2 class="subtitle is-size-4-desktop is-size-5-touch">{{ doc.description }}</h2>
+                            </div>
+                        </div>
                         <br>
                         <ContentRenderer class="is-size-5-desktop is-size-6-touch" :value="doc" />
                     </ContentDoc>

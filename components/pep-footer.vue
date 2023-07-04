@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer pt-6 mt-6 pb-0 px-0 has-background-white">
+  <footer class="footer is-size-5 pt-6 mt-6 pb-0 px-0 has-background-white">
     <div class="level  is-hidden-mobile">
       <div class="level-left">
 
@@ -11,16 +11,16 @@
         <p>Jaipur, India</p>
       </div>
       <div class="level-item">
-        <p>hellopeplum@gmail.com</p>
+        <a href="mailto:hellopeplum@gmail.com" target="blank" class="has-text-dark is-underlined">hellopeplum@gmail.com</a>
       </div>
       <div class="level-item">
         <div>
 
           <p>Follow us</p>
           <p>
-            <a href="" class="mr-2 is-underlined">Instagram,</a>
-            <a href="" class="mr-2 is-underlined">Behance,</a>
-            <a href="" class="is-underlined">Dribbble</a>
+            <a href="https://instagram.com/peplum.in" target="blank" class="has-text-dark mr-2 is-underlined">Instagram,</a>
+            <a href="https://instagram.com/peplum.in" target="blank" class="has-text-dark mr-2 is-underlined">Behance,</a>
+            <a href="https://instagram.com/peplum.in" target="blank" class="has-text-dark is-underlined">Dribbble</a>
           </p>
         </div>
       </div>
@@ -30,7 +30,8 @@
       <br>
       <p>Jaipur, India</p>
       <br>
-      <p>hellopeplum@gmail.com</p>
+      <a href="mailto:hellopeplum@gmail.com" target="blank" class="is-underlined">hellopeplum@gmail.com</a>
+
       <br>
       <p>Follow us </p>
       <p>

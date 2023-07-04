@@ -24,4 +24,4 @@ collections:
       - { label: 'Alight Shift (left,right,center)', name: 'shift', widget: 'string' }
       - { label: 'Time (2018 - 2019)', name: 'time', widget: 'string' }
       - { label: 'Link Preview', name: 'link_preview', widget: 'string' }
-      - { label: 'Link to Read', name: 'link_to_read', widget: 'string' }
+      - { label: 'Header Type (split,para)', name: 'header_type', widget: 'string' }
