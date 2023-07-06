@@ -4,7 +4,8 @@
       <div class="columns" :class="{ 'is-centered': row.shift == 'center' }">
         <div class="column is-8" :class="{ 'is-offset-4-desktop': row.shift == 'right' }">
           <figure class="image has-background-white-bis">
-            <nuxt-img provider="netlify"  loading="lazy" :src="row.cover" />
+            <nuxt-img provider="netlify" format="webp" sizes="sm:100vw md:50vw lg:800px"
+  loading="lazy" :src="row.cover" />
           </figure>
           <div class="columns is-centered mt-3" v-if="row.header_type == 'split'">
             <div class="column is-4-desktop is-12-touch">

@@ -4,8 +4,7 @@
             <div class="columns" :class="{ 'is-centered': row.shift == 'center' }">
                 <div class="column is-8" :class="{ 'is-offset-4-desktop': row.shift == 'right' }">
                     <figure class="image has-background-white-bis">
-                        <nuxt-img provider="netlify" loading="lazy" :src="row.cover" />
-                        <!-- <img class="" src="" alt=""> -->
+                        <nuxt-img provider="netlify" loading="lazy" format="webp" sizes="sm:100vw md:50vw lg:800px" />
                     </figure>
                     <div class="columns is-centered mt-3">
                         <div class="column is-4-desktop is-12-touch">
@@ -15,7 +14,9 @@
                         <div class="column is-6-desktop is-12-touch is-offset-2-desktop">
                             <p class="is-size-5-desktop is-size-6-touch">{{ row.description }}</p>
                             <br>
-                            <nuxt-link :to="row._path" class="has-text-dark has-text-weight-semibold  is-underlined is-size-5">Learn more →</nuxt-link>
+                            <nuxt-link :to="row._path"
+                                class="has-text-dark has-text-weight-semibold  is-underlined is-size-5">Learn more
+                                →</nuxt-link>
                         </div>
                     </div>
                 </div>
@@ -66,7 +67,7 @@
 //     },
 //   ];
 
-const { data: posts } = await useAsyncData('work', () => queryContent('/work').only(['title', 'cover', 'description', 'time', 'shift','_path']).find())
+const { data: posts } = await useAsyncData('work', () => queryContent('/work').only(['title', 'cover', 'description', 'time', 'shift', '_path']).find())
 
   // const { posts:blogposts } = await useAsyncData('work', () => {queryContent('work').findOne()})
 
